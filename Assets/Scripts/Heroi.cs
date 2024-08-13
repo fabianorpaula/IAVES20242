@@ -16,6 +16,7 @@ public class Heroi : MonoBehaviour
     void Start()
     {
         agente = GetComponent<NavMeshAgent>();
+        IndiceLocal = Random.Range(0, Destinos.Count);
         LocalDestinado = Destinos[IndiceLocal].transform.position;
     }
 
@@ -26,13 +27,16 @@ public class Heroi : MonoBehaviour
 
         if(Vector3.Distance(transform.position, LocalDestinado) < 5)
         {
-            IndiceLocal++;
-            
+            //Em Ordem
+             /*IndiceLocal++;
 
-            if(IndiceLocal >= Destinos.Count)
-            {
-                IndiceLocal = 0;
-            }
+
+             if(IndiceLocal >= Destinos.Count)
+             {
+                 IndiceLocal = 0;
+             }*/
+
+            IndiceLocal = Random.Range(0, Destinos.Count);
             LocalDestinado = Destinos[IndiceLocal].transform.position;
         }
 
