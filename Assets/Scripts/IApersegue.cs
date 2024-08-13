@@ -31,4 +31,14 @@ public class IApersegue : MonoBehaviour
 
         
     }
+
+
+    private void OnTriggerEnter(Collider colisao)
+    {
+        if(colisao.gameObject.tag == "Ataque")
+        {
+            Debug.Log("Me Bateram");
+            Destroy(this.gameObject);
+        }
+    }
 }
