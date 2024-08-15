@@ -71,6 +71,7 @@ public class Heroi : MonoBehaviour
             
 
         }
+
     }
 
     public void Atacar_ligado()
